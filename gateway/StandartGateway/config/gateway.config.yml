@@ -1,0 +1,41 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  host: localhost
+apiEndpoints:
+  loginEndpoint:
+    host: '*'
+    paths: '/log'
+serviceEndpoints:
+  loginService:
+    url: 'http://localhost:3001'
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+pipelines:
+  loginPipeline:
+    apiEndpoints:
+      - loginEndpoint
+    policies:
+    # Uncomment `key-auth:` when instructed to in the Getting Started guide.
+    # - key-auth:
+      - log:
+        - action:
+            message: 'Запрос: ${req.method} ${req.url}'
+      - cors:
+          - action:
+              origin: 'http://localhost:3000'
+              methods: 'GET,HEAD,OPTIONS,PATCH,POST,DELETE'
+              headers: 'Content-Type, Authorization'
+              credentials: true
+      - proxy:
+          - action:
+              serviceEndpoint: loginService 
+              changeOrigin: true

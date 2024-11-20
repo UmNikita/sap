@@ -1,0 +1,114 @@
+body {
+    scrollbar-width: thin;          /* "auto" или "thin"  */
+    scrollbar-color: #3b393c #2b292c;   /* плашка скролла и дорожка */ 
+}
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+background: #2b292c;
+}
+*::-webkit-scrollbar-thumb {
+background-color: #3b393c;
+border-radius: 5px;
+border: 3px solid #2b292c;
+}
+#main {
+    display: flex;
+    background-color: #121013;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.sidePanel {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+#menuContainer {
+    height: 100vh;
+    width: 100px;
+    background-color: #1a141c;
+    z-index: 1;
+}
+#dropMenuContainer {
+    width: 350px;
+    height: 100vh;
+    box-shadow: 0 0 7px 10px rgb(10 10 10 / 33%);
+    background-color: #1a141c;
+    z-index: 10;
+    justify-content: left;
+    align-items: start;
+    display: none;
+}
+#currentContainer {
+    width: 100px;
+    background-color: #272528;
+    height: 100vh;
+    margin-left: 100px;
+    z-index: 2;
+    box-shadow: 20px 0px 10px 0px rgb(10 10 10 / 33%);
+    display: none;
+}
+#burgerMenu {
+    background-image: url('../img/mainComponentBtn/burger.png');
+    height: 20px;
+    margin-top: 30px;
+}
+#chatsMenu {
+    background-image: url('../img/mainComponentBtn/chats.png');
+    margin-top: 70px;
+}
+#serversMenu {
+    background-image: url('../img/mainComponentBtn/servers.png');
+    margin-top: 20px;
+}
+#settingsMenu {
+    background-image: url('../img/mainComponentBtn/settings.png');
+    margin-top: 650px;
+}
+#homeMenu {
+    background-image: url('../img/mainComponentBtn/home.png');
+    margin-top: 30px;
+}
+#contentContainer {
+    width: 100%;
+    filter: brightness(100%);
+}
+.menuBtn {
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+}
+.menuDropBtn {
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+    margin-left: 30px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.menuDropBtn span {
+    color: #d9d9d9;
+    font-family: "Rubik", sans-serif;
+    font-size: 13px;
+    margin-left: 20px;
+}
+#settingsBtn {
+    margin-top: 550px;
+}
+#signature {
+    color: #9c9999;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    margin-top: 100px;
+    margin-left: 30px;
+}

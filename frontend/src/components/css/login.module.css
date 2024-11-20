@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.loginContainer {
+    height: 100vh;
+    width: 100%;
+    background-color: #161417;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputData {
+    width: 525px;
+    height: auto;
+}
+.inputData p {
+    color: #605d60;
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+}
+.field {
+    background-color: #dbd9db;
+    outline: none;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+.checkbox::before {
+    background: #871ae6;
+}
+.mail {
+    margin-left: 20%;
+    margin-top: 20px;
+    font-size: 20px !important;
+}
+.inputData button {
+    color: white;
+    height: 50px;
+    width: 70%;
+    border-radius: 25px;
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+    margin-left: 5%;
+}
+#regBtn {
+    background: #871ae6;
+    margin-top: 50px;
+    border: none;
+}
+#logBtn {
+    margin-top: 15px;
+    background-color: #161417;
+    border: 3px solid #502479;
+}
+.agreement {
+    height: 75px;
+    margin-top: auto;
+}
+.agreement p {
+    text-align: center;
+    font-size: 16px !important;
+}
+.agreement a {
+    color: #871ae6;
+}
+.logoContainer {
+    height: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 250px;
+}
+.countryContainer {
+    margin-bottom: 50px;
+}
+#logoName {
+    color: white !important;
+    font-size: 50px;
+    margin-top: 20px;
+}
+button:hover {
+    cursor: pointer;
+}
